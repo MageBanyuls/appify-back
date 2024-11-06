@@ -1,0 +1,19 @@
+[
+    {
+        "id": "acc_AeN5Kx8TeDxKyV8D",
+        "type": "checking_account",
+        "number": "170086177",
+        "name": "Cuenta Corriente",
+        "official_name": "Cuenta Corriente",
+        "balance": {
+            "available": 48373871,
+            "current": 48373871,
+            "limit": 48373871
+        },
+        "holder_id": "415792638",
+        "holder_name": "Raúl Rolón Tamayo",
+        "currency": "CLP",
+        "refreshed_at": "2024-04-04T14:27:32.854Z",
+        "object": "account"
+    }
+]

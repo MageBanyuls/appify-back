@@ -1,0 +1,1567 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model agendamiento_proyecto {
+  id       Int       @id @default(autoincrement())
+  proyecto String    @db.VarChar(100)
+  user     String    @db.VarChar(100)
+  duracion DateTime? @db.Time(0)
+  fecha    DateTime? @db.Date
+
+  @@index([proyecto], map: "proyectos")
+  @@index([user], map: "subusuarios")
+}
+
+model bancos {
+  id     String @id @db.VarChar(100)
+  user   String @db.VarChar(100)
+  nombre String @db.VarChar(100)
+  codigo String @db.VarChar(100)
+
+  @@index([user], map: "usuarios")
+}
+
+model categoria_cuenta {
+  id         String  @id @db.VarChar(100)
+  user       String  @db.VarChar(100)
+  nombre     String  @db.VarChar(75)
+  codigo     String  @db.VarChar(75)
+  activo     Boolean
+  pasivo     Boolean
+  patrimonio Boolean
+  resultado  Boolean
+  orden      Boolean
+
+  @@index([user], map: "usuarios")
+}
+
+model clientes {
+  id                      String    @id @db.VarChar(100)
+  user                    String    @db.VarChar(100)
+  razon_social            String    @db.VarChar(200)
+  rut                     String    @db.VarChar(30)
+  giro                    String    @db.VarChar(200)
+  direccion               String    @db.VarChar(200)
+  comuna                  String    @db.VarChar(200)
+  ciudad                  String    @db.VarChar(200)
+  suscripcion_a_encuestas Boolean?
+  activo                  Boolean?
+  condicion_de_pago       String    @db.VarChar(100)
+  linea_de_credito        Float?    @db.Float
+  exension_de_impuestos   Boolean?
+  notas                   String?   @db.Text
+  pie_de_pagina           String?   @db.Text
+  fecha_creado            DateTime? @default(now()) @db.Timestamp(0)
+
+  @@index([user], map: "usuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model cobros {
+  id                    String   @id @db.VarChar(100)
+  user                  String   @db.VarChar(100)
+  cuenta_banco          String   @db.VarChar(100)
+  clienteId             String   @db.VarChar(100)
+  pagado                Boolean  @default(false)
+  cuenta_origen_destino String   @db.VarChar(100)
+  fecha                 DateTime @db.Date
+  movimiento_monto      Decimal? @db.Decimal(30, 2)
+  tipo                  String   @db.VarChar(50)
+  tipo_n                String   @db.VarChar(100)
+  glosa                 String?  @db.Text
+
+  @@index([user], map: "usuarios")
+  @@index([clienteId], map: "clientes")
+  @@index([cuenta_banco], map: "cuentas_banco")
+}
+
+model condiciones_condicion_pago {
+  id          String @id @db.VarChar(100)
+  idCondicion String @db.VarChar(100)
+  porcentaje  Float  @db.Float
+  numero_dias Int
+
+  @@index([idCondicion], map: "condicion_pago")
+}
+
+model consultas {
+  id             Int     @id @default(autoincrement())
+  idVendedor     String  @db.VarChar(100)
+  nombre         String  @db.VarChar(200)
+  email          String  @db.VarChar(200)
+  celular        String  @db.VarChar(30)
+  nombre_empresa String  @db.VarChar(50)
+  consulta       String? @db.Text
+  archivo        String? @db.VarChar(200)
+  estado         Boolean
+
+  @@index([idVendedor], map: "subusuarios")
+}
+
+model contactos_por_cliente {
+  id         String  @id @db.VarChar(100)
+  cliente    String  @db.VarChar(100)
+  nombre     String? @db.VarChar(200)
+  email      String? @db.VarChar(200)
+  celular    String? @db.VarChar(30)
+  telefono   String? @db.VarChar(30)
+  vendedorId String  @db.VarChar(100)
+
+  @@index([cliente], map: "clientes")
+  @@index([vendedorId], map: "subusuarios")
+}
+
+model costos_por_proyecto {
+  id       String    @id @db.VarChar(100)
+  proyecto String    @db.VarChar(100)
+  nombre   String?   @db.VarChar(200)
+  fecha    DateTime? @db.Date
+  cantidad Int?
+  costo    Float?    @db.Float
+  total    Int?
+  notas    String?   @db.Text
+
+  @@index([proyecto], map: "proyectos")
+}
+
+model cuenta_tipo_documento {
+  id      String  @id @db.VarChar(100)
+  user    String  @db.VarChar(100)
+  nombre  String  @db.VarChar(100)
+  credito Boolean
+  contado Boolean
+
+  @@index([user], map: "usuarios")
+}
+
+model cuentas_banco {
+  id                    String  @id @db.VarChar(100)
+  user                  String  @db.VarChar(100)
+  nombre                String  @db.VarChar(100)
+  bancoId               String  @db.VarChar(100)
+  tipo_cuenta           String  @db.VarChar(100)
+  nro_cuenta_corriente  String  @db.VarChar(100)
+  codigo                String  @db.VarChar(100)
+  cuenta_bancaria       Boolean
+  moneda_secundaria     Boolean
+  estado                Boolean
+  predeterminada_pagos  Boolean
+  predeterminada_cobros Boolean
+  documentos_permitidos Boolean
+
+  @@index([user], map: "usuarios")
+  @@index([bancoId], map: "bancos")
+}
+
+model direccion_de_prestacion_proyecto {
+  id         String  @id @db.VarChar(100)
+  proyecto   String  @db.VarChar(100)
+  punto      String? @db.VarChar(100)
+  atencion_a String? @db.VarChar(200)
+  direccion  String? @db.VarChar(100)
+  comuna     String? @db.VarChar(100)
+  ciudad     String? @db.VarChar(100)
+  duracion   String? @db.VarChar(100)
+
+  @@index([proyecto], map: "proyectos")
+  @@index([punto], map: "puntos_de_despacho_por_cliente")
+}
+
+model documento_compra {
+  id               String @id @db.VarChar(100)
+  user             String @db.VarChar(100)
+  numero_documento String @db.VarChar(100)
+
+  @@index([user], map: "usuarios")
+}
+
+model documento_despacho {
+  id       String  @id @db.VarChar(100)
+  user     String  @db.VarChar(100)
+  venta    Boolean
+  traslado Boolean
+
+  @@index([user], map: "usuarios")
+}
+
+model documento_despacho_traslado {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  fecha             DateTime? @db.Date
+  idCliente         String    @db.VarChar(100)
+  idTransportista   String    @db.VarChar(100)
+  punto             String    @db.VarChar(50)
+  direccion_destino String    @db.VarChar(259)
+  comuna            String    @db.VarChar(100)
+  ciudad            String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  numero_documento  String    @db.VarChar(100)
+  ot                Boolean
+  fact_libre        Boolean
+
+  @@index([idDoc], map: "documento_despacho")
+  @@index([idTransportista], map: "transportista")
+  @@index([idCliente], map: "clientes")
+}
+
+model documento_despacho_venta {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  fecha             DateTime? @db.Date
+  idCliente         String    @db.VarChar(100)
+  idTransportista   String    @db.VarChar(100)
+  ot                Boolean
+  fact_libre        Boolean
+  punto             String    @db.VarChar(50)
+  direccion_destino String    @db.VarChar(259)
+  comuna            String    @db.VarChar(100)
+  ciudad            String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  numero_documento  String    @db.VarChar(100)
+
+  @@index([idDoc], map: "documento_despacho")
+  @@index([idTransportista], map: "transportista")
+  @@index([idCliente], map: "clientes")
+}
+
+model documento_venta {
+  id               String @id @db.VarChar(100)
+  user             String @db.VarChar(100)
+  numero_documento Int
+
+  @@index([user], map: "usuarios")
+}
+
+model factura_compra {
+  id                String   @id @db.VarChar(100)
+  idDocCompra       String   @db.VarChar(100)
+  proveedor         String   @db.VarChar(100)
+  tipo_documento    String   @db.VarChar(100)
+  numero_documento  String   @db.VarChar(100)
+  fecha             DateTime @db.Date
+  condicion_de_pago String   @db.VarChar(100)
+  cuenta            String   @db.VarChar(100)
+  notas             String?  @db.Text
+  neto              Float    @db.Float
+  bruto             Float    @db.Float
+
+  @@index([proveedor], map: "proveedores")
+  @@index([condicion_de_pago], map: "condicion_pago")
+  @@index([cuenta], map: "cuentas_banco")
+  @@index([idDocCompra], map: "documento_compra")
+}
+
+model factura_venta {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  idCliente         String    @db.VarChar(100)
+  tipo_documento    String    @db.VarChar(100)
+  numero_documento  Int
+  fecha             DateTime? @db.Date
+  idVendedor        String    @db.VarChar(100)
+  condicion_de_pago String    @db.VarChar(100)
+  centro_beneficio  String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  nota_interna      String?   @db.Text
+  ot                Boolean
+  neto              Float     @db.Float
+  bruto             Float     @db.Float
+  pagado            Boolean
+
+  @@index([idCliente], map: "clientes")
+  @@index([idDoc], map: "documento_venta")
+  @@index([idVendedor], map: "subusuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model factura_venta_excenta {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  idCliente         String    @db.VarChar(100)
+  tipo_documento    String    @db.VarChar(100)
+  numero_documento  Int
+  fecha             DateTime? @db.Date
+  idVendedor        String    @db.VarChar(100)
+  condicion_de_pago String    @db.VarChar(100)
+  centro_beneficio  String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  nota_interna      String?   @db.Text
+  ot                Boolean
+  neto              Float     @db.Float
+  bruto             Float     @db.Float
+  pagado            Boolean
+
+  @@index([idCliente], map: "clientes")
+  @@index([idDoc], map: "documento_venta")
+  @@index([idVendedor], map: "subusuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model item_despacho_traslado_ot {
+  id                 String @id @db.VarChar(100)
+  idOt               String @db.VarChar(100)
+  idDespachoTraslado String @db.VarChar(100)
+
+  @@index([idDespachoTraslado], map: "documento_despacho_venta")
+  @@index([idOt], map: "orden_trabajo")
+}
+
+model item_despacho_venta_ot {
+  id              String @id @db.VarChar(100)
+  idOt            String @db.VarChar(100)
+  idDespachoVenta String @db.VarChar(100)
+
+  @@index([idDespachoVenta], map: "documento_despacho_venta")
+  @@index([idOt], map: "orden_trabajo")
+}
+
+model item_producto {
+  id            String  @id @db.VarChar(100)
+  idProducto    String  @db.VarChar(100)
+  idOrdenCompra String  @db.VarChar(100)
+  cantidad      Int
+  unitario      Float   @db.Float
+  neto          Float   @db.Float
+  subtotal      Float   @db.Float
+  IVA           Float   @db.Float
+  total         Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+
+  @@index([idOrdenCompra], map: "orden_compra")
+  @@index([idProducto], map: "productos")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_producto_documento_despacho_traslado {
+  id               String @id @db.VarChar(100)
+  idProducto       String @db.VarChar(100)
+  idDocumentoVenta String @db.VarChar(100)
+  cantidad         Int
+  unitario         Int
+
+  @@index([idDocumentoVenta], map: "documento_despacho_traslado")
+  @@index([idProducto], map: "productos")
+}
+
+model item_producto_documento_despacho_venta {
+  id               String @id @db.VarChar(100)
+  idProducto       String @db.VarChar(100)
+  idDocumentoVenta String @db.VarChar(100)
+  cantidad         Int
+  unitario         Int
+  costo_unitario   Float  @db.Float
+  subtotal         Float  @db.Float
+  iva              Float  @db.Float
+  total_con_iva    Float  @db.Float
+
+  @@index([idDocumentoVenta], map: "documento_despacho_venta")
+  @@index([idProducto], map: "productos")
+}
+
+model item_producto_documento_venta {
+  id               String  @id @db.VarChar(100)
+  idProducto       String  @db.VarChar(100)
+  idDocumentoVenta String  @db.VarChar(100)
+  codigo           String? @db.VarChar(100)
+  cantidad         Int
+  unitario         Int
+  neto             Int
+  cuenta           String? @db.VarChar(100)
+  bonificacion     Float?  @db.Float
+  notas            String? @db.Text
+
+  @@index([idDocumentoVenta], map: "documento_venta")
+  @@index([idProducto], map: "productos")
+}
+
+model item_producto_factura_compra {
+  id              Int    @id @default(autoincrement())
+  idProducto      String @db.VarChar(100)
+  idFacturaCompra String @db.VarChar(100)
+  cantidad        Int
+  unitario        Int
+  cuenta          String @db.VarChar(100)
+
+  @@index([idFacturaCompra], map: "factura_compra")
+  @@index([idProducto], map: "productos")
+}
+
+model item_producto_factura_venta {
+  id           Int     @id @default(autoincrement())
+  idProducto   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  bruto        Float   @db.Float
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta")
+  @@index([idProducto], map: "productos")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_producto_factura_venta_excenta {
+  id           Int     @id @default(autoincrement())
+  idProducto   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta_excenta")
+  @@index([idProducto], map: "productos")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_producto_factura_voucher_venta {
+  id           Int     @id @default(autoincrement())
+  idProducto   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idProducto], map: "productos")
+  @@index([idFactura], map: "voucher_venta")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_receta_productos {
+  id            Int    @id @default(autoincrement())
+  idReceta      String @db.VarChar(100)
+  idSubProducto String @db.VarChar(100)
+
+  @@index([idSubProducto], map: "productos")
+  @@index([idReceta], map: "receta_productos")
+}
+
+model item_receta_servicios {
+  id            Int    @id @default(autoincrement())
+  idReceta      String @db.VarChar(100)
+  idSubServicio String @db.VarChar(100)
+
+  @@index([idReceta], map: "receta_servicios")
+  @@index([idSubServicio], map: "servicios")
+}
+
+model item_servicio_documento_despacho {
+  id               String @id @db.VarChar(100)
+  idServicio       String @db.VarChar(100)
+  idDocumentoVenta String @db.VarChar(100)
+  cantidad         Int
+  unitario         Int
+
+  @@index([idDocumentoVenta], map: "documento_venta")
+  @@index([idServicio], map: "servicios")
+}
+
+model item_servicio_documento_venta {
+  id               String  @id @db.VarChar(100)
+  idServicio       String  @db.VarChar(100)
+  idDocumentoVenta String  @db.VarChar(100)
+  codigo           String? @db.VarChar(100)
+  cantidad         Int
+  unitario         Int
+  neto             Int
+  cuenta           String? @db.VarChar(100)
+  bonificacion     Float?  @db.Float
+  notas            String? @db.Text
+
+  @@index([idServicio], map: "documento_venta")
+  @@index([idServicio], map: "servicios")
+}
+
+model item_servicio_factura_compra {
+  id              Int    @id @default(autoincrement())
+  idServicio      String @db.VarChar(100)
+  idFacturaCompra String @db.VarChar(100)
+  cantidad        Int
+  unitario        Int
+  cuenta          String @db.VarChar(100)
+  neto            Float  @db.Float
+  subtotal        Float  @db.Float
+
+  @@index([idFacturaCompra], map: "factura_compra")
+  @@index([idServicio], map: "servicios")
+}
+
+model item_servicio_factura_venta {
+  id           Int     @id @default(autoincrement())
+  idServicio   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  bruto        Float   @db.Float
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta")
+  @@index([idServicio], map: "servicios")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_servicio_factura_venta_excenta {
+  id           Int     @id @default(autoincrement())
+  idServicio   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta_excenta")
+  @@index([idServicio], map: "servicios")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_servicio_voucher_venta {
+  id           Int     @id @default(autoincrement())
+  idServicio   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idServicio], map: "servicios")
+  @@index([idFactura], map: "voucher_venta")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_servicios {
+  id            String  @id @db.VarChar(100)
+  idServicio    String  @db.VarChar(100)
+  idOrdenCompra String  @db.VarChar(100)
+  cantidad      Int
+  unitario      Float   @db.Float
+  neto          Float   @db.Float
+  subtotal      Float   @db.Float
+  IVA           Float   @db.Float
+  total         Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+
+  @@index([idOrdenCompra], map: "orden_compra")
+  @@index([idServicio], map: "servicios")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model listas_de_precio {
+  id      String   @id @db.VarChar(100)
+  nombre  String   @db.VarChar(200)
+  cliente String   @db.VarChar(100)
+  iva     Boolean?
+
+  @@index([cliente], map: "clientes")
+}
+
+model nota_factura_venta {
+  id             Int    @id @default(autoincrement())
+  idFacturaVenta String @db.VarChar(100)
+  idNotadeCD     String @db.VarChar(100)
+
+  @@index([idFacturaVenta], map: "factura_venta")
+  @@index([idNotadeCD], map: "notas_de_credito_debito")
+}
+
+model nota_factura_venta_excenta {
+  id                    Int    @id @default(autoincrement())
+  idFacturaVentaExcenta String @db.VarChar(100)
+  idNotadeCD            String @db.VarChar(100)
+
+  @@index([idFacturaVentaExcenta], map: "factura_venta_excenta")
+  @@index([idNotadeCD], map: "notas_de_credito_debito")
+}
+
+model notas_de_credito_debito {
+  id                  String    @id @db.VarChar(100)
+  idDoc               String    @db.VarChar(100)
+  idCliente           String    @db.VarChar(100)
+  idVendedor          String    @db.VarChar(100)
+  tipo_credito        Boolean
+  tipo_debito         Boolean
+  numero_documento    Int?
+  fecha               DateTime? @db.Date
+  motivo_referencia   String?   @db.VarChar(40)
+  centro_de_beneficio String    @db.VarChar(50)
+  observacion         String?   @db.Text
+  nota_interna        String?   @db.Text
+  anula_doc           Boolean
+  corrige_monto       Boolean
+  neto                Float     @db.Float
+  bruto               Float     @db.Float
+
+  @@index([idCliente], map: "clientes")
+  @@index([idDoc], map: "documento_venta")
+  @@index([idVendedor], map: "subusuarios")
+}
+
+model notas_de_credito_debito_compras {
+  id                  String    @id @db.VarChar(100)
+  idDoc               String    @db.VarChar(100)
+  idProveedor         String    @db.VarChar(100)
+  idVendedor          String    @db.VarChar(100)
+  tipo_credito        Boolean
+  tipo_debito         Boolean
+  anula_doc           Boolean
+  corrige_monto       Boolean
+  numero_documento    String    @db.VarChar(100)
+  tipo_nota           String    @db.VarChar(100)
+  fecha               DateTime? @db.Date
+  motivo_referencia   String?   @db.VarChar(40)
+  centro_de_beneficio String    @db.VarChar(50)
+  observacion         String?   @db.Text
+  nota_interna        String?   @db.Text
+  neto                Float     @db.Float
+  bruto               Float     @db.Float
+
+  @@index([idVendedor], map: "subusuarios")
+  @@index([idProveedor], map: "proveedores")
+  @@index([idDoc], map: "documento_compra")
+}
+
+model orden_compra {
+  id                String    @id @db.VarChar(100)
+  idProvedor        String    @db.VarChar(100)
+  user              String    @db.VarChar(100)
+  numero_documento  String    @db.VarChar(100)
+  fecha             DateTime? @db.Date
+  condicion_de_pago String    @db.VarChar(100)
+  notas             String?   @db.Text
+  subtotal          Float     @db.Float
+  IVA               Float     @db.Float
+  total             Float     @db.Float
+
+  @@index([idProvedor], map: "proveedores")
+  @@index([condicion_de_pago], map: "condicion_pago")
+  @@index([user], map: "usuarios")
+}
+
+model orden_trabajo {
+  id         String    @id @db.VarChar(100)
+  idProyecto String    @db.VarChar(100)
+  user       String    @db.VarChar(100)
+  idVendedor String    @db.VarChar(100)
+  fecha      DateTime? @db.Date
+  estado     String    @db.VarChar(50)
+
+  @@index([idProyecto], map: "proyectos")
+  @@index([idVendedor], map: "subusuarios")
+  @@index([user], map: "usuarios")
+}
+
+model pagos {
+  id                    String   @id @db.VarChar(100)
+  user                  String   @db.VarChar(100)
+  cuenta_banco          String   @db.VarChar(100)
+  proveedorId           String   @db.VarChar(100)
+  pagado                Boolean  @default(false)
+  cuenta_origen_destino String   @db.VarChar(100)
+  fecha                 DateTime @db.Date
+  movimiento_monto      Decimal? @db.Decimal(30, 2)
+  tipo                  String   @db.VarChar(50)
+  tipo_n                String   @db.VarChar(100)
+  glosa                 String?  @db.Text
+
+  @@index([user], map: "usuarios")
+  @@index([cuenta_banco], map: "cuentas_banco")
+  @@index([proveedorId], map: "proveedores")
+}
+
+model permisos {
+  id           Int     @id @default(autoincrement())
+  categoria    String  @db.VarChar(100)
+  subcategoria String? @db.VarChar(100)
+}
+
+model permisos_de_usuario {
+  id          Int      @id @default(autoincrement())
+  idPermiso   Int
+  user        String   @db.VarChar(100)
+  inactivo    Boolean
+  ver         Boolean
+  administrar Boolean
+  todo        Boolean?
+  propietario Boolean?
+
+  @@index([idPermiso], map: "permisos")
+  @@index([user], map: "subusuarios")
+}
+
+model productos {
+  id                String   @id @db.VarChar(100)
+  user              String   @db.VarChar(100)
+  nombre            String   @db.VarChar(100)
+  moneda            Int
+  precio            Float    @db.Float
+  imagen            String?  @db.VarChar(100)
+  iva               Boolean
+  activo            Boolean
+  codigo            String?  @db.VarChar(100)
+  codigo_barra      String?  @db.VarChar(100)
+  unidad            String?  @db.VarChar(100)
+  costo             Float?   @db.Float
+  exencion_impuesto Boolean?
+  exencion_valor    Int?
+  disponibilidad    Boolean?
+  manejo_stock      Boolean?
+  minimo_stock      Int?
+  maximo_stock      Int?
+  unidad_medida     String?  @db.VarChar(50)
+  cantidad          Int?
+  notas             String?  @db.Text
+
+  @@index([user], map: "usuarios")
+  @@index([moneda], map: "monedas")
+}
+
+model productos_lista_de_precios {
+  id          Int    @id @default(autoincrement())
+  id_lista    String @db.VarChar(100)
+  id_producto String @db.VarChar(100)
+  precio      Float? @db.Float
+
+  @@index([id_lista], map: "listas_de_precio")
+  @@index([id_producto], map: "productos")
+}
+
+model proveedores {
+  id                  String   @id @db.VarChar(100)
+  user                String   @db.VarChar(100)
+  rut                 String   @db.VarChar(20)
+  razon_social        String   @db.VarChar(200)
+  activo              Boolean?
+  giro                String?  @db.VarChar(200)
+  condicion_de_pago   String   @db.VarChar(100)
+  nombre_fantasia     String?  @db.VarChar(200)
+  cuenta_contable     String?  @db.VarChar(100)
+  persona             String?  @db.VarChar(150)
+  direccion           String?  @db.VarChar(200)
+  email               String?  @db.VarChar(200)
+  comuna              String?  @db.VarChar(100)
+  telefono            String?  @db.VarChar(30)
+  ciudad              String?  @db.VarChar(100)
+  banco               String?  @db.VarChar(100)
+  nombre_beneficiario String?  @db.VarChar(200)
+  nombre_cuenta       String?  @db.VarChar(200)
+  rut_beneficiario    String?  @db.VarChar(20)
+  nro_cta_corriente   String?  @db.VarChar(50)
+  correo_cobranzas    String?  @db.VarChar(200)
+
+  @@index([user], map: "usuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model proyectos {
+  id                    String    @id @db.VarChar(100)
+  user                  String    @db.VarChar(100)
+  vendedor              String    @db.VarChar(100)
+  cliente               String    @db.VarChar(100)
+  numero_proyecto       String    @db.VarChar(100)
+  contacto              String    @db.VarChar(100)
+  comision              Float?    @db.Float
+  nombre_etiqueta       String?   @db.VarChar(100)
+  condicion_de_pago     String    @db.VarChar(100)
+  boton_de_pago         Boolean?
+  plazo_de_entrega_dias Int?
+  plazo_de_entrega      DateTime? @db.Date
+  nota_interna          String?   @db.Text
+  estado                String?   @db.VarChar(100)
+  fecha                 DateTime? @db.Date
+
+  @@index([cliente], map: "clientes")
+  @@index([vendedor], map: "subusuarios")
+  @@index([user], map: "usuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model puntos_de_despacho_por_cliente {
+  id              String   @id @db.VarChar(100)
+  cliente         String   @db.VarChar(100)
+  direccion       String?  @db.VarChar(200)
+  nombre_receptor String?  @db.VarChar(200)
+  lugar           String?  @db.VarChar(200)
+  comuna          String?  @db.VarChar(200)
+  ciudad          String?  @db.VarChar(200)
+  datos_de_pago   Boolean?
+
+  @@index([cliente], map: "clientes")
+}
+
+model receta_productos {
+  id                  String @id @db.VarChar(100)
+  idProductoprincipal String @db.VarChar(100)
+  idProductoasociado  String @db.VarChar(100)
+
+  @@index([idProductoasociado], map: "productos")
+}
+
+model receta_servicios {
+  id                  String @id @db.VarChar(100)
+  idServicioprincipal String @db.VarChar(100)
+  idServicioasociado  String @db.VarChar(100)
+
+  @@index([idServicioasociado], map: "servicios")
+}
+
+model servicios {
+  id                String   @id @db.VarChar(100)
+  user              String   @db.VarChar(100)
+  nombre            String   @db.VarChar(100)
+  moneda            Int
+  precio            Float    @db.Float
+  imagen            String?  @db.VarChar(100)
+  iva               Boolean
+  activo            Boolean
+  codigo            String?  @db.VarChar(100)
+  codigo_barra      String?  @db.VarChar(100)
+  unidad            String?  @db.VarChar(100)
+  costo             Float?   @db.Float
+  exencion_impuesto Boolean?
+  exencion_valor    Int?
+  disponibilidad    Boolean?
+  manejo_stock      Boolean?
+  minimo_stock      Int?
+  maximo_stock      Int?
+  unidad_medida     String?  @db.VarChar(50)
+  unidad_de_compra  Int?
+  notas             String?  @db.Text
+
+  @@index([user], map: "usuarios")
+  @@index([moneda], map: "monedas")
+}
+
+model subusuarios {
+  id                  String    @id @db.VarChar(100)
+  user                String    @db.VarChar(100)
+  nombre              String    @db.VarChar(100)
+  apellido            String    @db.VarChar(100)
+  email               String    @db.VarChar(200)
+  celular             String    @db.VarChar(50)
+  fecha_de_nacimiento DateTime? @db.Date
+  cargo               String?   @db.VarChar(250)
+  ref_superusuario    Int?      @db.TinyInt
+  checkeado           Int       @default(0)
+  password            String?   @default("hola1234") @db.VarChar(255)
+  activo              Boolean?  @default(false)
+
+  @@index([user], map: "usuarios")
+}
+
+model usuarios {
+  id                  String    @id @db.VarChar(100)
+  nombre              String    @db.VarChar(100)
+  apellido            String    @db.VarChar(100)
+  email               String    @db.VarChar(200)
+  celular             String    @db.VarChar(50)
+  fecha_de_nacimiento DateTime? @db.Date
+  password            String    @db.VarChar(100)
+  activo              Boolean   @default(true)
+}
+
+model vendedores_por_contacto {
+  id       Int    @id @default(autoincrement())
+  contacto String @db.VarChar(100)
+  vendedor String @db.VarChar(100)
+
+  @@index([contacto], map: "contactos_por_cliente")
+  @@index([vendedor], map: "subusuarios")
+}
+
+model voucher_venta {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  idCliente         String    @db.VarChar(100)
+  tipo_documento    String    @db.VarChar(100)
+  numero_documento  String    @db.VarChar(100)
+  fecha             DateTime? @db.Date
+  idVendedor        String    @db.VarChar(100)
+  condicion_de_pago String    @db.VarChar(100)
+  centro_beneficio  String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  nota_interna      String?   @db.Text
+
+  @@index([idCliente], map: "clientes")
+  @@index([idDoc], map: "documento_venta")
+  @@index([idVendedor], map: "subusuarios")
+  @@index([condicion_de_pago], map: "condicion_pago")
+}
+
+model proveedor_productos {
+  id         Int    @id @default(autoincrement())
+  proveedor  String @db.VarChar(100)
+  idProducto String @db.VarChar(100)
+
+  @@index([idProducto], map: "productos")
+  @@index([proveedor], map: "proveedores")
+}
+
+model administracion_anticipo {
+  id                          Int     @id @default(autoincrement())
+  empresa                     String  @db.VarChar(100)
+  cuenta_anticipo_clientes    String? @db.VarChar(100)
+  cuenta_anticipo_proveedores String? @db.VarChar(100)
+  cuenta_balance_apertura     String? @db.VarChar(100)
+  cuenta_ajuste_cambario      String? @db.VarChar(100)
+  cuenta_boton_pago           String? @db.VarChar(100)
+  cuenta_beneficios_defecto   String? @db.VarChar(100)
+
+  @@index([empresa], map: "empresa")
+}
+
+model administracion_impuesto {
+  id                             Int     @id @default(autoincrement())
+  empresa                        String  @db.VarChar(100)
+  cuenta_impuesto_debito         String? @db.VarChar(100)
+  cuenta_impuesto_credito        String? @db.VarChar(100)
+  valor_impuesto_retenido        Float   @default(0) @db.Float
+  cuenta_impuesto_no_recuperable String? @db.VarChar(100)
+  plazo_no_recuperable           Int     @default(0)
+  cuenta_retencion_impuesto      String? @db.VarChar(100)
+  cuenta_impuesto_especifico     String? @db.VarChar(100)
+
+  @@index([empresa], map: "empresa")
+}
+
+model administracion_por_clasificar {
+  id                                      Int     @id @default(autoincrement())
+  empresa                                 String  @db.VarChar(100)
+  cuenta_documentos_pendientes_clasificar String? @db.VarChar(100)
+
+  @@index([empresa], map: "empresa")
+}
+
+model administracion_por_cobrar {
+  id                                      Int     @id @default(autoincrement())
+  empresa                                 String  @db.VarChar(100)
+  cuenta_facturas_por_cobrar              String? @db.VarChar(100)
+  cuenta_documentos_en_cartera_por_cobrar String? @db.VarChar(100)
+
+  @@index([empresa], map: "empresa")
+}
+
+model administracion_por_pagar {
+  id                          Int     @id @default(autoincrement())
+  empresa                     String  @db.VarChar(100)
+  cuenta_honorarios_por_pagar String? @db.VarChar(100)
+  cuenta_facturas_por_pagar   String? @db.VarChar(100)
+  cuenta_vouchers_por_pagar   String? @db.VarChar(100)
+  cuenta_documentos_por_pagar String? @db.VarChar(100)
+
+  @@index([empresa], map: "empresa")
+}
+
+model cobranzas {
+  id              Int     @id @default(autoincrement())
+  empresa         String  @db.VarChar(100)
+  asunto          String? @db.VarChar(100)
+  mensaje_nivel_1 String? @db.Text
+  mensaje_nivel_2 String? @db.Text
+  mensaje_nivel_3 String? @db.Text
+
+  @@index([empresa], map: "empresa")
+}
+
+model e_commerce {
+  id                  Int     @id @default(autoincrement())
+  user                String  @db.VarChar(100)
+  logo                String? @db.VarChar(200)
+  nombre              String? @db.VarChar(75)
+  categoria           String? @db.VarChar(100)
+  mostrar_comentarios Boolean @default(false)
+  descripcion         String? @db.Text
+
+  @@index([user], map: "usuarios")
+}
+
+model empresa {
+  id               String  @id @db.VarChar(100)
+  user             String  @db.VarChar(100)
+  logo             String? @db.VarChar(150)
+  nombre           String  @db.VarChar(100)
+  direccion_matriz String? @db.VarChar(120)
+  direccion_bodega String? @db.VarChar(100)
+  prefijo_tel      Int?
+  RUT              String  @db.VarChar(100)
+  giro             String? @db.VarChar(100)
+  pagina_web       String? @db.VarChar(100)
+  prefijo_cel      Int?
+
+  @@index([user], map: "usuarios")
+}
+
+model empresa_proyecto {
+  id                            Int     @id @default(autoincrement())
+  empresa                       String  @db.VarChar(100)
+  valor_impuesto                Int     @default(0)
+  logo                          String? @db.VarChar(150)
+  porcentaje_de_ot              Float   @default(0) @db.Float
+  texto_para_compartir_proyecto String? @db.VarChar(100)
+  cotizacion_descuento_visible  Boolean
+  nombre_impuesto               String  @db.VarChar(50)
+
+  @@index([empresa], map: "empresa")
+}
+
+model facturacion_electronica {
+  id                               Int     @id @default(autoincrement())
+  empresa                          String  @db.VarChar(100)
+  recibir_doc_libre_DTE_automatico Boolean @default(false)
+  contrasena_sii                   String? @db.VarChar(50)
+  folio_factura_excenta            Int     @default(0)
+  folio_facura                     Int     @default(0)
+  folio_factura_compra             Int     @default(0)
+  folio_nota_debito                Int     @default(0)
+  folio_nota_credito               Int     @default(0)
+  folio_guia_despacho              Int     @default(0)
+  folio_boleta_excenta             Int     @default(0)
+  folio_boleta_fisica              Int     @default(0)
+  folio_boleta_electronica         Int     @default(0)
+  set_factura_basica               Boolean @default(false)
+  set_boletas                      Boolean @default(false)
+  set_facturas_exportacion         Boolean @default(false)
+  set_facturas_compra              Boolean @default(false)
+
+  @@index([empresa], map: "empresa")
+}
+
+model modulos_configuracion {
+  id                          Int     @id @default(autoincrement())
+  empresa                     String  @db.VarChar(100)
+  modulo_administracion       String? @db.VarChar(100)
+  modulo_satisfaccion_cliente Boolean @default(false)
+  modulo_workflow             Boolean @default(false)
+  modulo_multi_rut            Boolean @default(false)
+  modulo_operaciones          Boolean @default(false)
+  modulo_google_drive         Boolean @default(false)
+
+  @@index([empresa], map: "empresa")
+}
+
+model monedas {
+  id     Int     @id @default(autoincrement())
+  user   String  @db.VarChar(100)
+  nombre String? @db.VarChar(50)
+
+  @@index([user], map: "usuarios")
+}
+
+model para_clientes_documentos_venta {
+  id                      Int     @id @default(autoincrement())
+  empresa                 String  @db.VarChar(100)
+  mensaje_envio_documento String? @db.Text
+
+  @@index([empresa], map: "empresa")
+}
+
+model para_clientes_orden_compra {
+  id                         Int     @id @default(autoincrement())
+  empresa                    String  @db.VarChar(100)
+  mensaje_envio_orden_compra String? @db.Text
+
+  @@index([empresa], map: "empresa")
+}
+
+model para_clientes_proyectos {
+  id                        Int     @id @default(autoincrement())
+  empresa                   String  @db.VarChar(100)
+  texto_inferior_firma      String? @db.Text
+  mensaje_envio_proyecto    String? @db.Text
+  texto_confirmacion_compra String? @db.Text
+
+  @@index([empresa], map: "empresa")
+}
+
+model sistema {
+  id                              Int      @id @default(autoincrement())
+  empresa                         String   @db.VarChar(100)
+  pais                            String   @db.VarChar(50)
+  idioma                          String?  @db.VarChar(120)
+  correo_cobranza                 String?  @db.VarChar(100)
+  moneda                          Int
+  moneda_secundaria               String?  @db.VarChar(3)
+  con_decimales                   Boolean?
+  tasa_venta                      Int?
+  tasa_compra                     Int?
+  tasa_cambio                     Int?
+  tolerancia                      Float?   @db.Float
+  registro_entregas_autocompletar Boolean?
+
+  @@index([empresa], map: "empresa")
+}
+
+model anticipos_cliente {
+  id               String  @id @db.VarChar(100)
+  idProyecto       String  @db.VarChar(100)
+  idCliente        String  @db.VarChar(100)
+  monto_anticipado Float   @db.Float
+  banco            String  @db.VarChar(100)
+  glosa            String? @db.Text
+
+  @@index([idCliente], map: "clientes")
+  @@index([idProyecto], map: "proyectos")
+}
+
+model anticipos_proveedor {
+  id               String  @id @db.VarChar(100)
+  idProyecto       String  @db.VarChar(100)
+  idProveedor      String  @db.VarChar(100)
+  monto_anticipado Float   @db.Float
+  banco            String  @db.VarChar(100)
+  glosa            String? @db.Text
+
+  @@index([idProveedor], map: "proveedores")
+  @@index([idProyecto], map: "proyectos")
+}
+
+model item_producto_proyecto {
+  id                   String @id @db.VarChar(100)
+  idProyecto           String @db.VarChar(100)
+  idProducto           String @db.VarChar(100)
+  cantidad             Int
+  porcentaje_descuento Float  @db.Float
+  nombre_impuesto      String @db.VarChar(50)
+  impuesto             Float  @db.Float
+  precio               Int
+  total                Int
+
+  @@index([idProducto], map: "productos")
+  @@index([idProyecto], map: "proyectos")
+}
+
+model item_servicio_proyecto {
+  id                   String @id @db.VarChar(100)
+  idProyecto           String @db.VarChar(100)
+  idServicio           String @db.VarChar(100)
+  cantidad             Int
+  porcentaje_descuento Float  @db.Float
+  nombre_impuesto      String @db.VarChar(50)
+  impuesto             Float  @db.Float
+  precio               Int
+  total                Int
+
+  @@index([idProyecto], map: "proyectos")
+  @@index([idServicio], map: "servicios")
+}
+
+model link_fintoc_bancos {
+  id            String @id @db.VarChar(100)
+  link_id_banco String @db.VarChar(150)
+  link_token    String @db.VarChar(150)
+  holder_id     String @db.VarChar(100)
+  user          String @db.VarChar(100)
+
+  @@index([user], map: "usuarios")
+}
+
+model movimientos_cuenta {
+  id                                    String    @id @db.VarChar(100)
+  cuenta_id                             String    @db.VarChar(100)
+  description                           String?   @db.VarChar(255)
+  amount                                Decimal?  @db.Decimal(30, 2)
+  currency                              String?   @db.VarChar(3)
+  post_date                             DateTime? @db.Timestamp(0)
+  transaction_date                      DateTime? @db.Timestamp(0)
+  type                                  String?   @db.VarChar(50)
+  sender_account_holder_id              String?   @db.VarChar(255)
+  sender_account_number                 String?   @db.VarChar(255)
+  sender_account_institution_id         String?   @db.VarChar(255)
+  sender_account_institution_name       String?   @db.VarChar(255)
+  sender_account_institution_country    String?   @db.VarChar(2)
+  sender_account_name                   String?   @db.VarChar(255)
+  recipient_account_holder_id           String?   @db.VarChar(255)
+  recipient_account_number              String?   @db.VarChar(255)
+  recipient_account_institution_id      String?   @db.VarChar(255)
+  recipient_account_institution_name    String?   @db.VarChar(255)
+  recipient_account_institution_country String?   @db.VarChar(2)
+  recipient_account_name                String?   @db.VarChar(255)
+  comment                               String?   @db.VarChar(255)
+  reference_id                          String?   @db.VarChar(255)
+  pending                               Boolean?
+
+  @@index([cuenta_id], map: "cuentasBancarias")
+}
+
+model nota_credito_nota_NC {
+  id               Int    @id @default(autoincrement())
+  idNotadeCD       String @db.VarChar(100)
+  numero_documento String @db.VarChar(100)
+
+  @@index([idNotadeCD], map: "notas_de_credito_debito")
+}
+
+model item_producto_nota_credito {
+  id            Int     @id @default(autoincrement())
+  idProducto    String  @db.VarChar(100)
+  idNotaCredito String  @db.VarChar(100)
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([idNotaCredito], map: "notas_de_credito_debito")
+  @@index([idProducto], map: "productos")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_producto_nota_credito_NC {
+  id            Int     @id @default(autoincrement())
+  idProducto    String  @db.VarChar(100)
+  idNotaCredito Int
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([idNotaCredito], map: "nota_credito_nota_NC")
+  @@index([idProducto], map: "productos")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_servicio_nota_credito {
+  id            Int     @id @default(autoincrement())
+  idServicio    String  @db.VarChar(100)
+  idNotaCredito String  @db.VarChar(100)
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([idNotaCredito], map: "notas_de_credito_debito")
+  @@index([idServicio], map: "servicios")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model item_servicio_nota_credito_NC {
+  id            Int     @id @default(autoincrement())
+  idServicio    String  @db.VarChar(100)
+  idNotaCredito Int
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([idNotaCredito], map: "nota_credito_nota_NC")
+  @@index([idServicio], map: "servicios")
+  @@index([cuenta], map: "cuentas_banco")
+}
+
+model cobros_factura_venta {
+  id             String @id @db.VarChar(100)
+  idCobro        String @db.VarChar(100)
+  idFacturaVenta String @db.VarChar(100)
+
+  @@index([idCobro], map: "cobros")
+  @@index([idFacturaVenta], map: "factura_venta")
+}
+
+model cobros_factura_venta_excenta {
+  id                    String @id @db.VarChar(100)
+  idCobro               String @db.VarChar(100)
+  idFacturaVentaExcenta String @db.VarChar(100)
+
+  @@index([idCobro], map: "cobros")
+  @@index([idFacturaVentaExcenta], map: "factura_venta_excenta")
+}
+
+model cuenta_banco_conciliacion {
+  id             String @id @db.VarChar(100)
+  idCuentaBanco  String @db.VarChar(100)
+  idConciliacion String @db.VarChar(100)
+
+  @@index([idCuentaBanco], map: "cuentas_banco")
+  @@index([idConciliacion], map: "link_fintoc_bancos")
+}
+
+model cobros_factura_nota_credito {
+  id            String @id @db.VarChar(100)
+  idCobro       String @db.VarChar(100)
+  idNotaCredito String @db.VarChar(100)
+
+  @@index([idCobro], map: "cobros")
+  @@index([idNotaCredito], map: "notas_de_credito_debito")
+}
+
+model pagos_factura_compra {
+  id              String @id @db.VarChar(100)
+  idPago          String @db.VarChar(100)
+  idFacturaCompra String @db.VarChar(100)
+
+  @@index([idFacturaCompra], map: "factura_compra")
+  @@index([idPago], map: "pagos")
+}
+
+model pagos_factura_nota_credito {
+  id            String @id @db.VarChar(100)
+  idPago        String @db.VarChar(100)
+  idNotaCredito String @db.VarChar(100)
+
+  @@index([idNotaCredito], map: "notas_de_credito_debito_compras")
+  @@index([idPago], map: "pagos")
+}
+
+model condicion_pago {
+  id           String  @id @db.VarChar(100)
+  user         String  @db.VarChar(100)
+  nombre       String  @db.VarChar(100)
+  interes      Float?  @db.Float
+  cuenta_cobro String? @db.VarChar(100)
+
+  @@index([user], map: "usuarios")
+}
+
+model item_producto_nota_credito_NC_compra {
+  id            String  @id @db.VarChar(100)
+  idProducto    String  @db.VarChar(100)
+  idNotaCredito Int
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([cuenta], map: "cuentas_banco")
+  @@index([idNotaCredito], map: "nota_credito_nota_NC_compra")
+  @@index([idProducto], map: "productos")
+}
+
+model item_producto_nota_credito_compra {
+  id         Int    @id @default(autoincrement())
+  idProducto String @db.VarChar(100)
+  idNotaCD   String @db.VarChar(100)
+  cantidad   Int
+  unitario   Float  @db.Float
+  cuenta     String @db.VarChar(100)
+  neto       Float  @db.Float
+  subtotal   Float  @db.Float
+  iva        Float  @db.Float
+  total      Float  @db.Float
+
+  @@index([cuenta], map: "cuentas_banco")
+  @@index([idNotaCD], map: "notas_de_credito_debito_compras")
+  @@index([idProducto], map: "productos")
+}
+
+model item_servicio_nota_credito_NC_compra {
+  id            String  @id @db.VarChar(100)
+  idServicio    String  @db.VarChar(100)
+  idNotaCredito Int
+  codigo        String? @db.VarChar(100)
+  cantidad      Int
+  unitario      Int
+  bruto         Float   @db.Float
+  neto          Float   @db.Float
+  cuenta        String? @db.VarChar(100)
+  bonificacion  Float?  @db.Float
+  notas         String? @db.Text
+
+  @@index([cuenta], map: "cuentas_banco")
+  @@index([idNotaCredito], map: "nota_credito_nota_NC_compra")
+  @@index([idServicio], map: "servicios")
+}
+
+model item_servicio_nota_credito_compra {
+  id         Int    @id @default(autoincrement())
+  idServicio String @db.VarChar(100)
+  idNotaCD   String @db.VarChar(100)
+  cantidad   Int
+  unitario   Float  @db.Float
+  cuenta     String @db.VarChar(100)
+  neto       Float  @db.Float
+  subtotal   Float  @db.Float
+  iva        Float  @db.Float
+  total      Float  @db.Float
+
+  @@index([cuenta], map: "cuentas_banco")
+  @@index([idNotaCD], map: "notas_de_credito_debito_compras")
+  @@index([idServicio], map: "servicios")
+}
+
+model nota_credito_nota_NC_compra {
+  id                Int    @id @default(autoincrement())
+  idNotadeCD        String @db.VarChar(100)
+  idNotadeCD_anular String @db.VarChar(100)
+
+  @@index([idNotadeCD], map: "notas_de_credito_debito_compras")
+}
+
+model nota_factura_compra {
+  id              Int    @id @default(autoincrement())
+  idFacturaCompra String @db.VarChar(100)
+  idNotadeCD      String @db.VarChar(100)
+
+  @@index([idFacturaCompra], map: "factura_compra")
+  @@index([idNotadeCD], map: "notas_de_credito_debito_compras")
+}
+
+model nota_factura_compra_excenta {
+  id                    Int    @id @default(autoincrement())
+  idFacturaCompraExenta String @db.VarChar(100)
+  idNotadeCD            String @db.VarChar(100)
+
+  @@index([idFacturaCompraExenta], map: "factura_compra_excenta")
+  @@index([idNotadeCD], map: "notas_de_credito_debito_compras")
+}
+
+model factura_compra_excenta {
+  id                String    @id @db.VarChar(100)
+  idDoc             String    @db.VarChar(100)
+  idProveedor       String    @db.VarChar(100)
+  tipo_documento    String    @db.VarChar(100)
+  numero_documento  String    @db.VarChar(100)
+  fecha             DateTime? @db.Date
+  idVendedor        String    @db.VarChar(100)
+  condicion_de_pago String    @db.VarChar(100)
+  centro_beneficio  String    @db.VarChar(100)
+  observacion       String?   @db.Text
+  nota_interna      String?   @db.Text
+  neto              Float     @db.Float
+  bruto             Float     @db.Float
+
+  @@index([condicion_de_pago], map: "condicion_pago")
+  @@index([idDoc], map: "documento_compra")
+  @@index([idProveedor], map: "proveedores")
+}
+
+model item_producto_factura_compra_excenta {
+  id           Int     @id @default(autoincrement())
+  idProducto   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta_excenta")
+  @@index([idProducto], map: "productos")
+}
+
+model transportista {
+  id                       String  @id @db.VarChar(100)
+  iduser                   String  @db.VarChar(100)
+  nombre_transportista     String  @db.VarChar(50)
+  nombre_conducor          String  @db.VarChar(50)
+  numero_placa             String? @db.VarChar(50)
+  numero_doc_conductor     String  @db.VarChar(50)
+  numero_doc_transportista String  @db.VarChar(50)
+
+  @@index([iduser], map: "usuarios")
+}
+
+model item_servicio_factura_compra_excenta {
+  id           Int     @id @default(autoincrement())
+  idServicio   String  @db.VarChar(100)
+  idFactura    String  @db.VarChar(100)
+  codigo       String? @db.VarChar(100)
+  cantidad     Int
+  unitario     Int
+  neto         Float   @db.Float
+  cuenta       String? @db.VarChar(100)
+  bonificacion Float?  @db.Float
+  notas        String? @db.Text
+
+  @@index([idFactura], map: "factura_venta_excenta")
+  @@index([idServicio], map: "servicios")
+}
+
+model pagos_factura_compra_excenta {
+  id               String @id @db.VarChar(100)
+  idPago           String @db.VarChar(100)
+  idFacturaCompraE String @db.VarChar(100)
+
+  @@index([idFacturaCompraE], map: "factura_compra_excenta")
+  @@index([idPago], map: "pagos")
+}
+
+model cuentasBancarias {
+  id               String   @id @db.VarChar(100)
+  conciliacion_id  String   @db.VarChar(100)
+  account_id       String?  @db.VarChar(255)
+  tipo             String?  @db.VarChar(255)
+  numero           String?  @db.VarChar(255)
+  nombre           String?  @db.VarChar(255)
+  saldo_disponible Int?
+  saldo_actual     Int?
+  moneda           String?  @db.VarChar(5)
+  activo           Boolean? @default(false)
+
+  @@index([conciliacion_id], map: "link_fintoc_bancos")
+}
+
+model orden_trabajo_FV {
+  id             Int    @id @default(autoincrement())
+  idOrdenT       String @db.VarChar(100)
+  idFacturaVenta String @db.VarChar(100)
+
+  @@index([idFacturaVenta], map: "factura_venta")
+  @@index([idOrdenT], map: "orden_trabajo")
+}
+
+model orden_trabajo_FVE {
+  id                    Int    @id @default(autoincrement())
+  idOrdenT              String @db.VarChar(100)
+  idFacturaVentaExcenta String @db.VarChar(100)
+
+  @@index([idFacturaVentaExcenta], map: "factura_venta_excenta")
+  @@index([idOrdenT], map: "orden_trabajo")
+}
+
+model pagoMercadopago {
+  id              String   @id @db.VarChar(100)
+  currency_id     String   @db.VarChar(20)
+  date_approved   DateTime @db.Date
+  payer_email     String   @db.VarChar(200)
+  payer_phone     String?  @db.VarChar(100)
+  payment_type_id String   @db.VarChar(50)
+  payer_rut       String   @db.VarChar(100)
+  duracion        DateTime @db.Date
+  register        Boolean
+}

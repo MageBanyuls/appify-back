@@ -1,0 +1,867 @@
+{
+    "data": [
+      {
+        "pago": {
+          "id": "Pago-01b9a5a9-7666-427b-ab43-4407437bbd07",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": [
+          {
+            "notaDeCreditoDebito": {
+              "NotaID": 3,
+              "FCEAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "NotaDeCreditoAsociadaID": "NC-8a73c18e-4507-42f5-85d3-2925c3c3280e"
+            },
+            "DocumentoAsociado": {
+              "FCEID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "DocumentoCompraID": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorID": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoSII": "numero que viene del sii",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "VendedorID": "id del vendedor",
+              "CondicionPago": "30 días",
+              "CentroBeneficio": "Compras",
+              "Observacion": null,
+              "NotaInterna": null
+            },
+            "Fdetails": {
+              "FacturaID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "idDocCompraAsociado": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoFC_FCE": "numero que viene del sii",
+              "CondicionPago": "30 días",
+              "Notas": "Producto exento de impuestos",
+              "Servicios": [
+                {
+                  "IdServicioAsociado": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "IdServicioAsociado": "service-007c1cbf-62de-4ef6-acd1-8560d95c0259",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ],
+              "Productos": [
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 15000,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "pago": {
+          "id": "Pago-167c93fe-4bb4-467d-b764-cb59387d9625",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": [
+          {
+            "notaDeCreditoDebito": {
+              "NotaID": 3,
+              "FCEAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "NotaDeCreditoAsociadaID": "NC-8a73c18e-4507-42f5-85d3-2925c3c3280e"
+            },
+            "DocumentoAsociado": {
+              "FCEID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "DocumentoCompraID": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorID": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoSII": "numero que viene del sii",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "VendedorID": "id del vendedor",
+              "CondicionPago": "30 días",
+              "CentroBeneficio": "Compras",
+              "Observacion": null,
+              "NotaInterna": null
+            },
+            "Fdetails": {
+              "FacturaID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "idDocCompraAsociado": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoFC_FCE": "numero que viene del sii",
+              "CondicionPago": "30 días",
+              "Notas": "Producto exento de impuestos",
+              "Servicios": [
+                {
+                  "IdServicioAsociado": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "IdServicioAsociado": "service-007c1cbf-62de-4ef6-acd1-8560d95c0259",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ],
+              "Productos": [
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 15000,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "pago": {
+          "id": "Pago-2dd1ed8d-24c5-4313-97a1-993457c5f10f",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-f19ccdd8-478e-448d-8498-89344499b2e9",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FCE-f1f317cd-86f3-49ba-9471-626b3df3fc46",
+            "idDocCompraAsociado": "DC-f19ccdd8-478e-448d-8498-89344499b2e9",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra Excenta",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "Notas": null,
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FCE-f1f317cd-86f3-49ba-9471-626b3df3fc46",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FCE-f1f317cd-86f3-49ba-9471-626b3df3fc46",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ],
+            "Productos": [
+              {
+                "idFacturaAsociada": "FCE-f1f317cd-86f3-49ba-9471-626b3df3fc46",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "idFacturaAsociada": "FCE-f1f317cd-86f3-49ba-9471-626b3df3fc46",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-47a4f62b-9969-4ac3-8a38-a23764e00057",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-c3e85119-0355-49b0-be04-cdc1b1a39fe8",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FCE-0015dc9d-07c5-4345-bdc4-ea36bbbcfbe7",
+            "idDocCompraAsociado": "DC-c3e85119-0355-49b0-be04-cdc1b1a39fe8",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra Excenta",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "Notas": null,
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FCE-0015dc9d-07c5-4345-bdc4-ea36bbbcfbe7",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FCE-0015dc9d-07c5-4345-bdc4-ea36bbbcfbe7",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ],
+            "Productos": [
+              {
+                "idFacturaAsociada": "FCE-0015dc9d-07c5-4345-bdc4-ea36bbbcfbe7",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "idFacturaAsociada": "FCE-0015dc9d-07c5-4345-bdc4-ea36bbbcfbe7",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-677e7098-c17f-45ae-976a-e3a23421662f",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-d10c18b2-74a2-43bc-9ee3-6cfebfe8d823",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FCE-56db2981-1c68-4399-bbdf-4d7f9f8e73a1",
+            "idDocCompraAsociado": "DC-d10c18b2-74a2-43bc-9ee3-6cfebfe8d823",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra Excenta",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "Notas": null,
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FCE-56db2981-1c68-4399-bbdf-4d7f9f8e73a1",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FCE-56db2981-1c68-4399-bbdf-4d7f9f8e73a1",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ],
+            "Productos": [
+              {
+                "idFacturaAsociada": "FCE-56db2981-1c68-4399-bbdf-4d7f9f8e73a1",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "idFacturaAsociada": "FCE-56db2981-1c68-4399-bbdf-4d7f9f8e73a1",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-7b93cd17-87be-4d77-9f1e-e009836b113c",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-117ff5f6-ead5-4a8d-a86d-6645be9425fb",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FC-fadb3fbb-6b70-46ef-93d7-39539c7c9e35",
+            "idDocCompraAsociado": "DC-117ff5f6-ead5-4a8d-a86d-6645be9425fb",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "CuentaAsociada": "Cuenta-003",
+            "Notas": "Primera compra de prueba",
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FC-fadb3fbb-6b70-46ef-93d7-39539c7c9e35",
+                "CantidadServicio": 5,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Subtotal": 12000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FC-fadb3fbb-6b70-46ef-93d7-39539c7c9e35",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 4000,
+                "Subtotal": 4000,
+                "Notas": "Primera compra de prueba"
+              }
+            ],
+            "Productos": [
+              {
+                "idProductoAsociado": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "idFacturaAsociada": "FC-fadb3fbb-6b70-46ef-93d7-39539c7c9e35",
+                "CantidadProducto": 10,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "idProductoAsociado": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "idFacturaAsociada": "FC-fadb3fbb-6b70-46ef-93d7-39539c7c9e35",
+                "CantidadProducto": 5,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-7d2c626a-7cd3-420c-9703-1b5f70a72cb0",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-80a594dd-19dd-457c-a836-94a83403659a",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FCE-f5715dfc-f0b1-427f-b43f-56c93bcb84ac",
+            "idDocCompraAsociado": "DC-80a594dd-19dd-457c-a836-94a83403659a",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra Excenta",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "Notas": null,
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FCE-f5715dfc-f0b1-427f-b43f-56c93bcb84ac",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FCE-f5715dfc-f0b1-427f-b43f-56c93bcb84ac",
+                "CodigoServicio": null,
+                "CantidadServicio": 10,
+                "PrecioUnitarioServicio": 500,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ],
+            "Productos": [
+              {
+                "idFacturaAsociada": "FCE-f5715dfc-f0b1-427f-b43f-56c93bcb84ac",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              },
+              {
+                "idFacturaAsociada": "FCE-f5715dfc-f0b1-427f-b43f-56c93bcb84ac",
+                "CodigoServicio": null,
+                "Cuenta": "Cuenta-003",
+                "NetoServicio": 5000,
+                "Bonificacion": null,
+                "Notas": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-83b9d470-4ea5-48a2-8c10-6ae92f4180fe",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta_banco_id",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": true,
+          "cuenta_origen_destino": "cuenta_origen_destino_id",
+          "fecha": "2024-04-12T00:00:00.000Z",
+          "movimiento_monto": "100",
+          "tipo": "tipo_de_cobro",
+          "tipo_n": "tipo_n",
+          "glosa": "glosa_del_cobro"
+        },
+        "factura": [
+          {
+            "notaDeCreditoDebito": {
+              "NotaID": 3,
+              "FCEAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "NotaDeCreditoAsociadaID": "NC-8a73c18e-4507-42f5-85d3-2925c3c3280e"
+            },
+            "DocumentoAsociado": {
+              "FCEID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "DocumentoCompraID": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorID": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoSII": "numero que viene del sii",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "VendedorID": "id del vendedor",
+              "CondicionPago": "30 días",
+              "CentroBeneficio": "Compras",
+              "Observacion": null,
+              "NotaInterna": null
+            },
+            "Fdetails": {
+              "FacturaID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "idDocCompraAsociado": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoFC_FCE": "numero que viene del sii",
+              "CondicionPago": "30 días",
+              "Notas": "Producto exento de impuestos",
+              "Servicios": [
+                {
+                  "IdServicioAsociado": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "IdServicioAsociado": "service-007c1cbf-62de-4ef6-acd1-8560d95c0259",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ],
+              "Productos": [
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 15000,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "pago": {
+          "id": "Pago-aea9d40e-ade9-4334-bcf2-c5072761ed7b",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-0b76120c-c0f2-4fab-afba-43072ae35749",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FC-aab2f3ec-decc-4481-a96c-26e2d07b09c6",
+            "idDocCompraAsociado": "DC-0b76120c-c0f2-4fab-afba-43072ae35749",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "CuentaAsociada": "Cuenta-003",
+            "Notas": "Primera compra de prueba",
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FC-aab2f3ec-decc-4481-a96c-26e2d07b09c6",
+                "CantidadServicio": 5,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Subtotal": 12000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FC-aab2f3ec-decc-4481-a96c-26e2d07b09c6",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 4000,
+                "Subtotal": 4000,
+                "Notas": "Primera compra de prueba"
+              }
+            ],
+            "Productos": [
+              {
+                "idProductoAsociado": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "idFacturaAsociada": "FC-aab2f3ec-decc-4481-a96c-26e2d07b09c6",
+                "CantidadProducto": 10,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "idProductoAsociado": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "idFacturaAsociada": "FC-aab2f3ec-decc-4481-a96c-26e2d07b09c6",
+                "CantidadProducto": 5,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-bb5752c8-217d-4669-944b-1eca074d8b53",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoCompraID": "DC-82e49907-aa40-495b-9316-81dc8eee3c3c",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDC": "numero que viene del sii",
+          "FacturaCompra_FacturaCompraExenta": {
+            "FacturaID": "FC-170b7aef-8c72-4f91-8837-65af457b4777",
+            "idDocCompraAsociado": "DC-82e49907-aa40-495b-9316-81dc8eee3c3c",
+            "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+            "FechaFactura": "2024-04-18T00:00:00.000Z",
+            "TipoDocumento": "Factura Compra",
+            "NumeroDocumentoFC_FCE": "numero que viene del sii",
+            "CondicionPago": "30 días",
+            "CuentaAsociada": "Cuenta-003",
+            "Notas": "Primera compra de prueba",
+            "Servicios": [
+              {
+                "IdServicioAsociado": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "idFacturaAsociada": "FC-170b7aef-8c72-4f91-8837-65af457b4777",
+                "CantidadServicio": 5,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Subtotal": 12000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "IdServicioAsociado": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "idFacturaAsociada": "FC-170b7aef-8c72-4f91-8837-65af457b4777",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 2000,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 4000,
+                "Subtotal": 4000,
+                "Notas": "Primera compra de prueba"
+              }
+            ],
+            "Productos": [
+              {
+                "idProductoAsociado": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "idFacturaAsociada": "FC-170b7aef-8c72-4f91-8837-65af457b4777",
+                "CantidadProducto": 10,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              },
+              {
+                "idProductoAsociado": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "idFacturaAsociada": "FC-170b7aef-8c72-4f91-8837-65af457b4777",
+                "CantidadProducto": 5,
+                "PrecioUnitarioProducto": 500,
+                "Cuenta": "Cuenta-002",
+                "NetoServicio": 10000,
+                "Notas": "Primera compra de prueba"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "pago": {
+          "id": "Pago-c0f15e34-fa5a-4e5e-a1de-d8efbcc3db23",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "proveedorId": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": [
+          {
+            "notaDeCreditoDebito": {
+              "NotaID": 3,
+              "FCEAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "NotaDeCreditoAsociadaID": "NC-8a73c18e-4507-42f5-85d3-2925c3c3280e"
+            },
+            "DocumentoAsociado": {
+              "FCEID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "DocumentoCompraID": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorID": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoSII": "numero que viene del sii",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "VendedorID": "id del vendedor",
+              "CondicionPago": "30 días",
+              "CentroBeneficio": "Compras",
+              "Observacion": null,
+              "NotaInterna": null
+            },
+            "Fdetails": {
+              "FacturaID": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+              "idDocCompraAsociado": "DC-3278a9ba-ff2d-4f45-b2e3-7a394df1a721",
+              "ProveedorIDAsociado": "prov-e9c3a432-5e8e-4c3c-89ed-81583eaf1706",
+              "FechaFactura": "2024-04-18T00:00:00.000Z",
+              "TipoDocumento": "Factura Compra Excenta",
+              "NumeroDocumentoFC_FCE": "numero que viene del sii",
+              "CondicionPago": "30 días",
+              "Notas": "Producto exento de impuestos",
+              "Servicios": [
+                {
+                  "IdServicioAsociado": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "IdServicioAsociado": "service-007c1cbf-62de-4ef6-acd1-8560d95c0259",
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "CantidadServicio": 10,
+                  "PrecioUnitarioServicio": 750,
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ],
+              "Productos": [
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 7500,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                },
+                {
+                  "idFacturaAsociada": "FCE-3406b4a5-8947-4418-b0fe-3b108e34d2a4",
+                  "CodigoServicio": "PRD456",
+                  "Cuenta": "4012",
+                  "NetoServicio": 15000,
+                  "Bonificacion": 300,
+                  "Notas": "Producto exento de impuestos"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }

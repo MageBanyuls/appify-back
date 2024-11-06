@@ -1,0 +1,231 @@
+paths:
+  /proveedor/createProv:
+    post:
+      tags:
+        - Proveedores
+      summary: Crea un nuevo proveedor.
+      description: Este endpoint permite crear un nuevo proveedor con la información proporcionada.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: string
+                  description: Identificador único del usuario que crea el proveedor.
+                  example: "sub-user-60ee9e82-04fe-4fb2-9aec-8fe08a3d974c"
+                rut:
+                  type: string
+                  example: "1234568-9"
+                razon_social:
+                  type: string
+                  example: "hermanosSA"
+                activo:
+                  type: boolean
+                  nullable: true
+                giro:
+                  type: string
+                  nullable: true
+                condicion_de_pago:
+                  type: integer
+                  example: 10
+                nombre_fantasia:
+                  type: string
+                  nullable: true
+                cuenta_contable:
+                  type: string
+                  nullable: true
+                persona:
+                  type: string
+                  nullable: true
+                direccion:
+                  type: string
+                  nullable: true
+                email:
+                  type: string
+                  format: email
+                  nullable: true
+                comuna:
+                  type: string
+                  nullable: true
+                telefono:
+                  type: string
+                  nullable: true
+                ciudad:
+                  type: string
+                  nullable: true
+                banco:
+                  type: string
+                  nullable: true
+                nombre_beneficiario:
+                  type: string
+                  nullable: true
+                nombre_cuenta:
+                  type: string
+                  nullable: true
+                rut_beneficiario:
+                  type: string
+                  nullable: true
+                nro_cta_corriente:
+                  type: string
+                  nullable: true
+                correo_cobranzas:
+                  type: string
+                  format: email
+                  nullable: true
+              required:
+                - user
+                - rut
+                - razon_social
+                - condicion_de_pago
+      responses:
+        '200':
+          description: Proveedor creado exitosamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Proveedor creado exitosamente."
+        '400':
+          description: Proveedor ya existente o usuario no válido.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 400
+                  message:
+                    type: string
+                    example: "Proveedor ya existente o usuario no válido."
+        '500':
+          description: Error al crear el proveedor.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Error al crear el proveedor."
+                  payload:
+                    type: object
+                    properties:
+                      detail:
+                        type: string
+                        example: "Detalles del error específico."
+  /user/updProv/{id}:
+    put:
+      tags:
+        - Proveedores
+      summary: Actualiza la información de un proveedor existente.
+      description: >
+        Este endpoint permite actualizar la información de un proveedor específico,
+        identificado por su ID único.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          example: prov-41d34c8d-1b4a-4255-9a0e-714e06f790e3
+          description: El identificador único del proveedor a actualizar.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rut:
+                  type: string
+                  example: "111111-9"
+                razon_social:
+                  type: string
+                  example: "jodeteSA"
+                comuna:
+                  type: string
+                  example: "maitensillo"
+                telefono:
+                  type: string
+                  example: "9954996969"
+                ciudad:
+                  type: string
+                  example: "santiago"
+                banco:
+                  type: string
+                  example: "bbva"
+              required:
+                - rut
+                - razon_social
+      responses:
+        '200':
+          description: Proveedor actualizado correctamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Proveedor actualizado correctamente."
+        '400':
+          description: No hay cambios para actualizar o datos de entrada inválidos.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 400
+                  message:
+                    type: string
+                    example: "No hay cambios para actualizar o datos de entrada inválidos."
+        '404':
+          description: Proveedor no encontrado.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 404
+                  message:
+                    type: string
+                    example: "Proveedor no encontrado."
+        '500':
+          description: Error al actualizar el proveedor en la base de datos.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Error al actualizar el proveedor en la base de datos."
+                  payload:
+                    type: object
+                    properties:
+                      detail:
+                        type: string
+                        example: "Detalles del error específico."

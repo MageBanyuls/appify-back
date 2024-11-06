@@ -1,0 +1,224 @@
+paths:
+  /product:
+    post:
+      tags:
+        - Productos
+      summary: Crea un nuevo producto
+      description: Añade un nuevo producto al sistema.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: producto
+          description: Objeto producto para crear
+          required: true
+          schema:
+            type: object
+            properties:
+              activo:
+                type: boolean
+                example: true
+              codigo:
+                type: string
+                example: "1234"
+              codigo_barra:
+                type: string
+                example: "1234"
+              costo:
+                type: number
+                example: 200
+              disponibilidad:
+                type: boolean
+                example: true
+              exencion_impuesto:
+                type: boolean
+                example: true
+              exencion_valor:
+                type: number
+              imagen:
+                type: string
+              iva:
+                type: boolean
+                example: true
+              manejo_stock:
+                type: boolean
+                example: true
+              maximo_stock:
+                type: number
+              minimo_stock:
+                type: number
+              nombre:
+                type: string
+                example: "Producto 1"
+              notas:
+                type: string
+                example: "Nota del producto"
+              precio:
+                type: number
+                example: 1400
+              unidad:
+                type: string
+              unidad_de_compra:
+                type: string
+              unidad_medida:
+                type: string
+                example: "unidad"
+              user:
+                type: string
+                example: "1114ad52-f699-4eb8-9a08-ef9e61eaa42a"
+              moneda:
+                type: integer
+                example: 1
+      responses:
+        '200':
+          description: Producto creado exitosamente
+        '400':
+          description: Error en la solicitud
+  /product/{idProducto}:
+    get:
+      tags:
+        - Productos
+      summary: Obtiene un producto por su ID
+      description: Retorna un producto basado en el ID proporcionado.
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: idProducto
+          type: string
+          required: true
+          description: ID del producto a obtener
+      responses:
+        '200':
+          description: Producto encontrado exitosamente
+        '404':
+          description: Producto no encontrado
+        '400':
+          description: Error en la solicitud
+    put:
+      tags:
+        - Productos
+      summary: Actualiza un producto existente
+      description: Actualiza los datos de un producto basado en el ID proporcionado.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: idProducto
+          type: string
+          required: true
+          description: ID del producto a actualizar
+        - in: body
+          name: producto
+          description: Campos del producto a actualizar
+          required: true
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                example: "product-0d4636c9-170a-4f58-8114-2b6604ba9970"
+              user:
+                type: string
+                example: "2"
+              nombre:
+                type: string
+                example: "Producto 1"
+              moneda:
+                type: integer
+                example: 1
+              precio:
+                type: number
+                example: 1400
+              imagen:
+                type: string
+              iva:
+                type: boolean
+                example: true
+              activo:
+                type: boolean
+                example: true
+              codigo:
+                type: string
+                example: "1234"
+              codigo_barra:
+                type: string
+                example: "1234"
+              unidad:
+                type: string
+              costo:
+                type: number
+                example: 150
+              exencion_impuesto:
+                type: boolean
+                example: true
+              exencion_valor:
+                type: number
+                example: 19
+              disponibilidad:
+                type: boolean
+                example: true
+              manejo_stock:
+                type: boolean
+                example: true
+              minimo_stock:
+                type: number
+              maximo_stock:
+                type: number
+              unidad_medida:
+                type: string
+                example: "unidad"
+              unidad_de_compra:
+                type: string
+              notas:
+                type: string
+                example: ""
+              extension_impuesto:
+                type: boolean
+                example: false
+      responses:
+        '200':
+          description: Producto actualizado exitosamente
+        '400':
+          description: Error en la solicitud
+    delete:
+      tags:
+        - Productos
+      summary: Elimina un producto
+      description: Elimina el producto basado en el ID proporcionado.
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: idProducto
+          type: string
+          required: true
+          description: ID del producto a eliminar
+      responses:
+        '200':
+          description: Producto eliminado exitosamente
+        '400':
+          description: Error en la solicitud
+  /products/{id}:
+    get:
+      tags:
+        - Productos
+      summary: Obtiene productos por ID de usuario
+      description: Retorna todos los productos asociados a un ID de usuario.
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: ID del usuario para obtener sus productos
+      responses:
+        '200':
+          description: Productos encontrados exitosamente
+        '400':
+          description: Error en la solicitud

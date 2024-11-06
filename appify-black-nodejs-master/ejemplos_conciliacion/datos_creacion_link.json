@@ -1,0 +1,73 @@
+{
+    "type": "link.created",
+    "data": {
+        "id": "link_D0qk2niM76VVk6Q9",
+        "holder_id": "416148503",
+        "username": "416148503",
+        "holder_type": "individual",
+        "created_at": "2024-04-04T15:30:11.693Z",
+        "institution": {
+            "id": "cl_banco_bice",
+            "name": "Banco BICE",
+            "country": "cl"
+        },
+        "link_token": "link_D0qk2niM76VVk6Q9_token_KZm3iQYugCsVQDh3eyEV_i76",
+        "mode": "test",
+        "active": true,
+        "status": "active",
+        "object": "link",
+        "accounts": [
+            {
+                "id": "acc_O381oEATGDQonG6b",
+                "type": "checking_account",
+                "number": "170086177",
+                "name": "Cuenta Corriente",
+                "official_name": "Cuenta Corriente",
+                "balance": {
+                    "available": 22001691,
+                    "current": 22001691,
+                    "limit": 22001691
+                },
+                "holder_id": "416148503",
+                "holder_name": "José Emilio Saavedra Limón",
+                "currency": "CLP",
+                "refreshed_at": "2024-04-02T19:18:32.432Z",
+                "object": "account"
+            },
+            {
+                "id": "acc_6yNPoPQTjnjKYOW8",
+                "type": "checking_account",
+                "number": "813990168",
+                "name": "Cuenta Corriente",
+                "official_name": "Cuenta Corriente",
+                "balance": {
+                    "available": 74553459,
+                    "current": 74553459,
+                    "limit": 74553459
+                },
+                "holder_id": "416148503",
+                "holder_name": "Sr. Andrés Alva Rascón",
+                "currency": "CLP",
+                "refreshed_at": "2023-08-01T12:27:04.647Z",
+                "object": "account"
+            },
+            {
+                "id": "acc_5pqWKkbT1bqoaOV1",
+                "type": "checking_account",
+                "number": "5233137377",
+                "name": "Cuenta Corriente",
+                "official_name": "Cuenta Corriente",
+                "balance": {
+                    "available": 48247632,
+                    "current": 48247632,
+                    "limit": 48247632
+                },
+                "holder_id": "416148503",
+                "holder_name": "Ana Luisa Pantoja Garibay",
+                "currency": "CLP",
+                "refreshed_at": "2024-04-02T19:18:34.301Z",
+                "object": "account"
+            }
+        ]
+    }
+}

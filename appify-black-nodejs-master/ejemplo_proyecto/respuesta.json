@@ -1,0 +1,74 @@
+{
+  "project": {
+    "proyecto": {
+      "id": "project-68527316-7905-41af-844d-21a3f48910c7",
+      "user": "usuario123",
+      "vendedor": "vendedor123",
+      "cliente": "cliente123",
+      "numero_proyecto": "PROY-001",
+      "contacto": "Contacto Cliente",
+      "comision": 0.05,
+      "nombre_etiqueta": "Etiqueta Proyecto",
+      "condicion_de_pago": "Pago al contado",
+      "boton_de_pago": true,
+      "plazo_de_entrega_dias": 10,
+      "plazo_de_entrega": "2024-04-30T00:00:00.000Z",
+      "nota_interna": "Nota interna del proyecto",
+      "estado": "En proceso"
+    },
+    "direccion": {
+      "id": "Direccion-prestacion-c16a58f2-e647-4511-a09a-994f72c28a3e",
+      "proyecto": "project-68527316-7905-41af-844d-21a3f48910c7",
+      "punto": "Punto de prestación",
+      "atencion_a": "Atención a nombre",
+      "direccion": "Dirección del punto",
+      "comuna": "Comuna del punto",
+      "ciudad": "Ciudad del punto",
+      "duracion": "PT8H"
+    },
+    "agendamiento": {
+      "id": 4,
+      "proyecto": "project-68527316-7905-41af-844d-21a3f48910c7",
+      "user": "usuario456",
+      "duracion": null,
+      "fecha": null
+    },
+    "servicios": [
+      {
+        "id": "item-service-project-d427e495-1187-4898-9229-8002eddacee8",
+        "idProyecto": "project-68527316-7905-41af-844d-21a3f48910c7",
+        "idServicio": "servicio123",
+        "cantidad": 2,
+        "porcentaje_descuento": 0.1,
+        "nombre_impuesto": "IVA",
+        "impuesto": 0.19,
+        "precio": 10000,
+        "total": 20000
+      },
+      {
+        "id": "item-service-project-5c9e9d69-3ad6-47d3-8060-ddb00f385a12",
+        "idProyecto": "project-68527316-7905-41af-844d-21a3f48910c7",
+        "idServicio": "servicio456",
+        "cantidad": 3,
+        "porcentaje_descuento": 0.05,
+        "nombre_impuesto": "IVA",
+        "impuesto": 0.19,
+        "precio": 15000,
+        "total": 45000
+      }
+    ],
+    "productos": [
+      {
+        "id": "item-product-project-961b5cdd-5236-4dca-affa-4983f0b040db",
+        "idProyecto": "project-68527316-7905-41af-844d-21a3f48910c7",
+        "idProducto": "producto123",
+        "cantidad": 1,
+        "porcentaje_descuento": 0.05,
+        "nombre_impuesto": "IVA",
+        "impuesto": 0.19,
+        "precio": 5000,
+        "total": 5000
+      }
+    ]
+  }
+}

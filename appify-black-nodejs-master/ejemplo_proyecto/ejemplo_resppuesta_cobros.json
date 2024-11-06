@@ -1,0 +1,932 @@
+{
+    "data": [
+      {
+        "cobro": {
+          "id": "Cobro-03c7050e-3de8-4b9a-b641-2f64f930be1a",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-95bdd3f3-1ecb-4a84-b4ed-40265d5a13a9",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-d26b0806-489e-4d87-9af7-80aa3a079690",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-0f1cdf36-98c5-4a39-8603-99b1d366f0d3",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-4f568628-73e4-4e4c-9b04-22bc90bcc927",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-4d02972e-5f05-48f8-9a22-335388dd2389",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-0f588b29-8968-40e7-ba3a-ff1fbc4ab1e6",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-5311d1fe-425b-4bd1-b025-3d6f60fe3047",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-46e2e02c-354a-4cfb-a60e-f63a4a1f98ce",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [],
+            "Productos": []
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-11cddcc4-8ecc-4c9c-815c-d0678686be3a",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": []
+      },
+      {
+        "cobro": {
+          "id": "Cobro-17d62677-1f38-4d81-849e-d8c68603d7f6",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": []
+      },
+      {
+        "cobro": {
+          "id": "Cobro-1a5fa45e-a5e3-4944-920c-7ef4c2e93e9c",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-a47be138-2256-4316-814e-8bdd7f294c82",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-20c83237-4eaa-495d-b177-49daf4a4e48e",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [],
+            "Productos": []
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-27483330-3b31-4903-9669-6a5dbc94f84a",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": []
+      },
+      {
+        "cobro": {
+          "id": "Cobro-39611c34-ba33-4d47-ad3b-d443e511a8e7",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-b2696713-cd99-445d-92b9-42a8878925aa",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-ff1e542f-a63a-4eb7-b62d-40dc0db6aacc",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [],
+            "Productos": []
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-44b6e3fa-6453-4dad-a17f-1f795c90eae2",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-873bc80c-bd62-4195-a6f5-4d46ef29acf3",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-c5246c80-8a91-4420-936d-08c81ddb490f",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [],
+            "Productos": []
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-6c2ebb36-9d8a-4302-b15a-7f44e0940d1e",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-35f2d14e-eb52-434b-b3a5-8fa866c8eb2d",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-d4160659-7d80-4033-85d6-610b017d4ede",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-7f7e253c-2d60-42b3-925d-3bdb072f349a",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-cf5f442c-497b-408b-9a73-308fe60e2d92",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-a65225c0-0b20-4c12-9e45-3d98c811bbb3",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-fa6f52b1-780e-47b4-80b1-b642e51fe6c5",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-462a302f-2628-47bc-8278-8e458eb7e831",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-7f7e253c-2d60-42b3-925d-3bdb072f349a",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-cf5f442c-497b-408b-9a73-308fe60e2d92",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-a8cd5627-97f6-447c-b0e9-6cb022b93f29",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-b967df61-0a77-40d1-9401-005b0bd91d9c",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-2e26385c-6f24-4b41-b216-cb7ceea84078",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-7f7e253c-2d60-42b3-925d-3bdb072f349a",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-cf5f442c-497b-408b-9a73-308fe60e2d92",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-ae9d2a04-877d-429d-b462-1de9fc96f060",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-eea9220c-e773-46bc-82f2-d5c14c8e7ee9",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-91acc45d-7e60-4d27-a25b-281f7cb21623",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-b4ef3121-51cf-4f20-9ffa-d7b5caff00d5",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-36cb6e0f-03fe-4d8d-8442-c180c73601cb",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-e2fabe1e-1789-4d1c-9bfb-996dcb1ee6c7",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-cbd5839a-a7fd-4d16-ad07-80086fb38d74",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-8ce619bf-e5e9-4f64-ac8a-734834ae0cd3",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-fed312ae-e5e2-4c31-8f8d-54a2d67027d1",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-ef8be840-ca4f-4e59-8725-09d106524e34",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-30a0b1ee-090d-419f-87be-cff42782afcb",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FVE-a3e79d86-f34e-4957-8c48-1e0720f6fcfe",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura de Venta Exenta",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-31d7f260-ce05-4b83-b27e-1269847a050d",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-7f7e253c-2d60-42b3-925d-3bdb072f349a",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-cf5f442c-497b-408b-9a73-308fe60e2d92",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "cobro": {
+          "id": "Cobro-fa10d55c-dd48-457e-bb50-4aa4231cc17b",
+          "user": "super-user-598d6bc2-f935-4a32-9f45-836fffac1e75",
+          "cuenta_banco": "cuenta banco superuser",
+          "clienteId": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+          "pagado": false,
+          "cuenta_origen_destino": "Ni idea",
+          "fecha": "2024-04-08T00:00:00.000Z",
+          "movimiento_monto": "200.33",
+          "tipo": "Pago al contado",
+          "tipo_n": "ni idea",
+          "glosa": "la glosa va aca papa"
+        },
+        "factura": {
+          "DocumentoVentaID": "DV-e1826c33-45df-4030-8fed-4b2abc286442",
+          "Usuario": "sub-user-9a84cf81-d493-4320-be9d-99e45da9fe6e",
+          "NumeroDocumentoDV": "numero que viene de SII",
+          "FacturaVenta_FacturaVentaExenta": {
+            "FacturaID": "FV-ad4ac645-8bf9-4ef5-ab49-16e6aabaa456",
+            "ClienteID": "cliente-26a583c8-5130-48a6-82eb-4796430bb354",
+            "VendedorID": "sub-user-b6034146-e508-4da5-bad9-eb7ec18fa5d7",
+            "FechaFactura": "2024-04-08T00:00:00.000Z",
+            "TipoDocumento": "Factura",
+            "NumeroDocumentoFV_FVE": "0001-00000234",
+            "CondicionPago": "Contado",
+            "CentroBeneficio": "Ventas",
+            "Observacion": "Venta de productos y servicios",
+            "NotaInterna": "Cliente solicita entrega a domicilio",
+            "Servicios": [
+              {
+                "IdServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+                "CodigoServicio": "SVC100",
+                "CantidadServicio": 2,
+                "PrecioUnitarioServicio": 100,
+                "BrutoServicio": 200,
+                "NetoServicio": 190,
+                "BonificacionServicio": 10,
+                "NotasServicio": "Servicio de mantenimiento"
+              },
+              {
+                "IdServicio": "service-cf0932a0-22e9-4d86-977d-bdb62a6d4afd",
+                "CodigoServicio": null,
+                "CantidadServicio": 1,
+                "PrecioUnitarioServicio": 150,
+                "BrutoServicio": 150,
+                "NetoServicio": 142.5,
+                "BonificacionServicio": 7.5,
+                "NotasServicio": "Servicio de instalación"
+              }
+            ],
+            "Productos": [
+              {
+                "IdProducto": "product-f8f53462-2554-4934-a9b8-55e6b3c78bdc",
+                "CodigoProducto": "PROD100",
+                "CantidadProducto": 3,
+                "PrecioUnitarioProducto": 50,
+                "BrutoProducto": 150,
+                "NetoProducto": 135,
+                "BonificacionProducto": 15,
+                "NotasProducto": "Producto A"
+              },
+              {
+                "IdProducto": "product-d518b8ea-d7b5-4f5c-8d2f-fa54e2b50e88",
+                "CodigoProducto": null,
+                "CantidadProducto": 2,
+                "PrecioUnitarioProducto": 75,
+                "BrutoProducto": 150,
+                "NetoProducto": 140,
+                "BonificacionProducto": 10,
+                "NotasProducto": "Producto B"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

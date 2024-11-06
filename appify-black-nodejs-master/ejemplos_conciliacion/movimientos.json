@@ -1,0 +1,588 @@
+[
+    {
+        "id": "mov_w5WYOnHoD42vLe4z",
+        "cuenta_id": "acc_8QDl85TVMnYy24J3", // Este es el campo que hay que agregar en cada movimiento que haya para que se le adjudique a la cuenta de la conciliacion
+        "description": "Excepturi laborum et est.",
+        "amount": -4750374,
+        "currency": "CLP",
+        "post_date": "2024-04-04T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "584192437",
+            "number": "275446021",
+            "institution": {
+                "id": "cl_banco_de_chile",
+                "name": "Banco de Chile",
+                "country": "cl"
+            },
+            "holder_name": "Manuel Dávila Rincón"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_ok9NmKHoJXAVVeGA",
+        "description": "Quos quas inventore optio.",
+        "amount": 1681369,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_pm48wdHgGQ613ewG",
+        "description": "Accusantium eius nam delectus.",
+        "amount": 8359903,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_rA7N4lHBdjO3MNVz",
+        "description": "Harum numquam eos dolor.",
+        "amount": -515668,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_EdV8pvHjkByOoYR5",
+        "description": "Et quo corrupti harum.",
+        "amount": -641285,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "652407749",
+            "number": "565291348",
+            "institution": {
+                "id": "mx_hey_banco",
+                "name": "Hey Banco",
+                "country": "mx"
+            },
+            "holder_name": "Miguel Ángel Zepeda Ortiz"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_jLD8gMH2VWRMBY5B",
+        "description": "Accusamus reiciendis error aperiam.",
+        "amount": -675714,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "745931278",
+            "number": "981287974",
+            "institution": {
+                "id": "mx_banco_banregio",
+                "name": "Banco Banregio",
+                "country": "mx"
+            },
+            "holder_name": "Guillermo Escobedo Baca"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_JP6YByHw17nW6e4O",
+        "description": "Vel est odit molestias.",
+        "amount": 9086344,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "745931278",
+            "number": "915596867",
+            "institution": {
+                "id": "mx_banco_ve_por_mas",
+                "name": "Banco Ve por Más",
+                "country": "mx"
+            },
+            "holder_name": "Lilia Posada Rocha"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_wbK8VEHZQ2MKxNEp",
+        "description": "Et minus expedita odio.",
+        "amount": 6492825,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_JP0YXVHlAM5618om",
+        "description": "Corporis rem qui quae.",
+        "amount": -1172390,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_anmNdbHaVKO0Vezw",
+        "description": "Praesentium quia soluta illo.",
+        "amount": -6809996,
+        "currency": "CLP",
+        "post_date": "2024-04-03T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_w5WYOnHoD42wLe4z",
+        "description": "Quasi impedit ex vel.",
+        "amount": 8471978,
+        "currency": "CLP",
+        "post_date": "2024-04-02T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_ZxENnDHM6mvJkeJk",
+        "description": "Non numquam autem enim.",
+        "amount": -4286039,
+        "currency": "CLP",
+        "post_date": "2024-04-02T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_jLD8gMH2V9q4mY5B",
+        "description": "Tempora id rerum explicabo.",
+        "amount": -5150982,
+        "currency": "CLP",
+        "post_date": "2024-04-02T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "791209161",
+            "number": "990208351",
+            "institution": {
+                "id": "cl_banco_bci",
+                "name": "Banco BCI",
+                "country": "cl"
+            },
+            "holder_name": "David Bernal Puente"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_j4yeaPHLk2z5Z8XO",
+        "description": "Minima minus rem quia.",
+        "amount": -6849057,
+        "currency": "CLP",
+        "post_date": "2024-04-01T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "791209161",
+            "number": "939823244",
+            "institution": {
+                "id": "mx_banco_afirme",
+                "name": "Banco Afirme",
+                "country": "mx"
+            },
+            "holder_name": "Miguel Portillo Delacrúz"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_4Ag8xaH5wGAjOea2",
+        "description": "Consequatur qui adipisci ut.",
+        "amount": -7426178,
+        "currency": "CLP",
+        "post_date": "2024-04-01T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "584192437",
+            "number": "571107987",
+            "institution": {
+                "id": "cl_banco_santander",
+                "name": "Banco Santander",
+                "country": "cl"
+            },
+            "holder_name": "María Ramos Carreón"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_Md9Y5PH5a2VrxeQL",
+        "description": "Impedit a fugit enim.",
+        "amount": -2476495,
+        "currency": "CLP",
+        "post_date": "2024-04-01T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_D5XekJH3pQm1M8wj",
+        "description": "Quod voluptatibus deserunt repellat.",
+        "amount": 823815,
+        "currency": "CLP",
+        "post_date": "2024-03-31T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_0lD8bQH4AB71ENQA",
+        "description": "Voluptatum nisi autem nobis.",
+        "amount": -3881652,
+        "currency": "CLP",
+        "post_date": "2024-03-31T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "652407749",
+            "number": "352290825",
+            "institution": {
+                "id": "mx_banco_bajio",
+                "name": "Banco del Bajío",
+                "country": "mx"
+            },
+            "holder_name": "Sra. Sancho Gallardo Moreno"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_wbK8VEHZQgBkLNEp",
+        "description": "Qui et ab nihil.",
+        "amount": 3577805,
+        "currency": "CLP",
+        "post_date": "2024-03-31T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "652407749",
+            "number": "868425021",
+            "institution": {
+                "id": "mx_banco_babien",
+                "name": "Banco del Bienestar",
+                "country": "mx"
+            },
+            "holder_name": "Emilio Zarate Reséndez"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_0lD8bQH4AZnbpNQA",
+        "description": "Omnis aut quod sunt.",
+        "amount": 9758403,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_grK8G4HjP4DxZe51",
+        "description": "Soluta eveniet voluptas aut.",
+        "amount": 7488253,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_j4yeaPHLk5JEJ8XO",
+        "description": "Aut esse eos nulla.",
+        "amount": 2298392,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "584192437",
+            "number": "364269673",
+            "institution": {
+                "id": "mx_banco_multiva",
+                "name": "Banco Multiva",
+                "country": "mx"
+            },
+            "holder_name": "Alfredo Esparza Arce"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_MwB8v3HBX07k2eVd",
+        "description": "Rerum at ea tenetur.",
+        "amount": 991660,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "652407749",
+            "number": "885730716",
+            "institution": {
+                "id": "cl_banco_bbva",
+                "name": "Banco BBVA",
+                "country": "cl"
+            },
+            "holder_name": "Bernardo Galarza Gonzales"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_QEaeq4HMqy2n18mW",
+        "description": "Consequatur labore voluptatem exercitationem.",
+        "amount": 4551594,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "584192437",
+            "number": "301332493",
+            "institution": {
+                "id": "cl_banco_coopeuch",
+                "name": "Banco Coopeuch",
+                "country": "cl"
+            },
+            "holder_name": "José Guerra Espinoza"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_PDkeRjHyXzpPde90",
+        "description": "Quibusdam quia doloribus mollitia.",
+        "amount": 3258263,
+        "currency": "CLP",
+        "post_date": "2024-03-30T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "652407749",
+            "number": "123784501",
+            "institution": {
+                "id": "mx_banco_autofin",
+                "name": "Banco Autofin",
+                "country": "mx"
+            },
+            "holder_name": "Pedro Gutiérrez Herrera"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_BX28ZBHzGLaV087b",
+        "description": "Est illum exercitationem libero.",
+        "amount": -4559410,
+        "currency": "CLP",
+        "post_date": "2024-03-29T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_mrQe26HZ13vdge5k",
+        "description": "Qui corporis aut ut.",
+        "amount": -2056120,
+        "currency": "CLP",
+        "post_date": "2024-03-29T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_Xxa86kHaqgE6leMG",
+        "description": "Sed quos expedita quidem.",
+        "amount": 9544055,
+        "currency": "CLP",
+        "post_date": "2024-03-29T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": null,
+        "sender_account": {
+            "holder_id": "791209161",
+            "number": "147840817",
+            "institution": {
+                "id": "mx_banco_monex",
+                "name": "Banco Monex",
+                "country": "mx"
+            },
+            "holder_name": "Jerónimo Laureano Garibay"
+        },
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_ZxENnDHM6y27QeJk",
+        "description": "Beatae nulla dicta est.",
+        "amount": -8339060,
+        "currency": "CLP",
+        "post_date": "2024-03-29T00:00:00Z",
+        "transaction_date": null,
+        "type": "transfer",
+        "recipient_account": {
+            "holder_id": "791209161",
+            "number": "870618258",
+            "institution": {
+                "id": "cl_banco_bbva",
+                "name": "Banco BBVA",
+                "country": "cl"
+            },
+            "holder_name": "Elvira Llamas Batista"
+        },
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    },
+    {
+        "id": "mov_pv5Yo1H2EanbP8gq",
+        "description": "Temporibus ipsa sint quibusdam.",
+        "amount": 9665975,
+        "currency": "CLP",
+        "post_date": "2024-03-29T00:00:00Z",
+        "transaction_date": null,
+        "type": "other",
+        "recipient_account": null,
+        "sender_account": null,
+        "comment": null,
+        "reference_id": null,
+        "pending": false,
+        "object": "movement"
+    }
+]

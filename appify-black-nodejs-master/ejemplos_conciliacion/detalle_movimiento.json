@@ -1,0 +1,24 @@
+{
+    "id": "mov_JP6YByHw17nW6e4O",
+    "description": "Vel est odit molestias.",
+    "amount": 9086344,
+    "currency": "CLP",
+    "post_date": "2024-04-03T00:00:00Z",
+    "transaction_date": null,
+    "type": "transfer",
+    "recipient_account": null,
+    "sender_account": {
+        "holder_id": "745931278",
+        "number": "915596867",
+        "institution": {
+            "id": "mx_banco_ve_por_mas",
+            "name": "Banco Ve por Más",
+            "country": "mx"
+        },
+        "holder_name": "Lilia Posada Rocha"
+    },
+    "comment": null,
+    "reference_id": null,
+    "pending": false,
+    "object": "movement"
+}

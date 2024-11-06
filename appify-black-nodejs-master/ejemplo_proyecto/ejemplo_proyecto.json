@@ -1,0 +1,59 @@
+{
+  "proyectos": {
+    "user": "super-user-d1ec2ecb-a54f-40fb-98b3-6af8e00a58fb",
+    "vendedor": "sub-user-fd4888b8-7c54-4b08-b572-d927973dfcfc",
+    "cliente": "cliente-b1c2a041-0bc8-42f2-8698-3889b37c85d8",
+    "numero_proyecto": "PROY-001",
+    "contacto": "Contacto Cliente",
+    "comision": 0.05,
+    "nombre_etiqueta": "Etiqueta Proyecto-4",
+    "condicion_de_pago": "Pago al contado",
+    "boton_de_pago": true,
+    "plazo_de_entrega_dias": 10,
+    "plazo_de_entrega": "2024-04-30T00:00:00Z",
+    "nota_interna": "Nota interna del proyecto",
+    "estado": "En proceso"
+  },
+  "direccion_de_prestacion_proyecto": {
+    "punto": "Punto de prestación",
+    "atencion_a": "Atención a nombre",
+    "direccion": "Dirección del punto",
+    "comuna": "Comuna del punto",
+    "ciudad": "Ciudad del punto",
+    "duracion": "PT8H"
+  },
+  "agendamiento_proyecto": {
+    "user": "usuario456"
+  },
+  "item_servicio_proyecto": [
+    {
+      "idServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+      "cantidad": 2,
+      "porcentaje_descuento": 0.1,
+      "nombre_impuesto": "IVA",
+      "impuesto": 0.19,
+      "precio": 10000,
+      "total": 20000
+    },
+    {
+      "idServicio": "service-fa477a3f-89ee-4d3b-8196-5322a951f04b",
+      "cantidad": 3,
+      "porcentaje_descuento": 0.05,
+      "nombre_impuesto": "IVA",
+      "impuesto": 0.19,
+      "precio": 15000,
+      "total": 45000
+    }
+  ],
+  "item_producto_proyecto": [
+    {
+      "idProducto": "product-b27e8084-edfd-4853-981a-b762ef23a1e9",
+      "cantidad": 1,
+      "porcentaje_descuento": 0.05,
+      "nombre_impuesto": "IVA",
+      "impuesto": 0.19,
+      "precio": 5000,
+      "total": 5000
+    }
+  ]
+}
